@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 class Pokemon {
   final String name;
   final String image;
@@ -11,9 +9,13 @@ class Pokemon {
     return Pokemon(
       name: map['name'],
       image: map['img'],
-      type: (map['type'] as List<dynamic>).map((e) => e as String).toList(),
-      id: map['img'],
-      num: map['img'],
+      type: (map['type'] as List<dynamic>)
+          .map(
+            (e) => e as String,
+          )
+          .toList(),
+      id: map['id'],
+      num: map['num'],
     );
   }
 
